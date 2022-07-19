@@ -12,11 +12,11 @@ public class DataTablesTest extends BaseTest {
         //Open Chrome browser
         driver.get(Urls.DATA_TABLES_PAGE_URL);
         //Add check
-        WebElement nameBach = driver.findElement(By.xpath("//table[@id='table1']//td[text()='fbach@yahoo.com']//preceding-sibling::td[contains(text(),'Bach')]"));
+        WebElement nameBach = driver.findElement(By.xpath("(//table[@id='table1']//td[text()='fbach@yahoo.com']//preceding-sibling::td)[1]"));
         String lastName = nameBach.getText();
-        Assert.assertEquals("Bach", lastName, "there isn't such  last name");
-        WebElement nameFrank = driver.findElement(By.xpath("//table[@id='table1']//td[text()='fbach@yahoo.com']//preceding-sibling::td[contains(text(),'Frank')]"));
+        WebElement nameFrank = driver.findElement(By.xpath("(//table[@id='table1']//td[text()='fbach@yahoo.com']//preceding-sibling::td)[2]"));
         String firstName = nameFrank.getText();
+        Assert.assertEquals("Bach", lastName, "there isn't such  last name");
         Assert.assertEquals("Frank", firstName, "there isn't such  first name");
     }
 
@@ -25,11 +25,12 @@ public class DataTablesTest extends BaseTest {
         //Open Chrome browser
         driver.get(Urls.DATA_TABLES_PAGE_URL);
         //Add check
-        WebElement priceDue = driver.findElement(By.xpath("//table[@id='table2']//td[text()='$51.00']"));
+        WebElement priceDue = driver.findElement(By.xpath("//table[@id='table2']//td[text()='fbach@yahoo.com']//following-sibling::td[contains(text(),'$')]"));
         String dueText = priceDue.getText();
         Assert.assertEquals("$51.00", dueText, "there isn't such  due");
-        WebElement link = driver.findElement(By.xpath("//table[@id='table2']//td[text()='http://www.frank.com']"));
+        WebElement link = driver.findElement(By.xpath("//table[@id='table2']//td[text()='fbach@yahoo.com']//following-sibling::td[contains(text(),'www')]"));
         String webSite = link.getText();
+        Assert.assertEquals("$51.00", dueText, "there isn't such  due");
         Assert.assertEquals("http://www.frank.com", webSite, "there isn't such  website");
     }
 }
