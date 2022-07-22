@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Checkboxes extends BaseTest {
+public class CheckboxesTest extends BaseTest {
     @Test
-    public void theFirstCheckboxUnchecked() {
+    public void theFirstCheckboxUncheckedTest () {
         //Open Chrome browser
         driver.get(Urls.CHECKBOXES_PAGE_URL);
         //Add check
@@ -18,7 +18,7 @@ public class Checkboxes extends BaseTest {
     }
 
     @Test
-    public void checkFirstCheckbox() {
+    public void checkFirstCheckboxTest() {
         //Open Chrome browser
         driver.get(Urls.CHECKBOXES_PAGE_URL);
         //Click the first checkbox
@@ -30,7 +30,7 @@ public class Checkboxes extends BaseTest {
     }
 
     @Test
-    public void theSecondCheckboxChecked() {
+    public void theSecondCheckboxCheckedTest() {
         //Open Chrome browser
         driver.get(Urls.CHECKBOXES_PAGE_URL);
         //Add check
@@ -40,7 +40,7 @@ public class Checkboxes extends BaseTest {
     }
 
     @Test
-    public void checkSecondCheckbox() {
+    public void checkSecondCheckboxTest() {
         //Open Chrome browser
         driver.get(Urls.CHECKBOXES_PAGE_URL);
         //Click the first checkbox

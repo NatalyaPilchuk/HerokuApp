@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class NotificationMessage extends BaseTest {
+public class NotificationMessageTest extends BaseTest {
     @Test
-    public void checkNotificationMessage() {
+    public void checkNotificationMessageTest () {
         //Open Chrome browser
         driver.get(Urls.NOTIFICATION_MESSAGE_PAGE_URL);
         // Click "Click here"

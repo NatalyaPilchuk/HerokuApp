@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Inputs extends BaseTest {
+public class InputsTest extends BaseTest {
     @Test
-    public void inputDigits() {
+    public void inputDigitsTest() {
         //Open Chrome browser
         driver.get(Urls.INPUTS_PAGE_URL);
         // Click on the up arrow

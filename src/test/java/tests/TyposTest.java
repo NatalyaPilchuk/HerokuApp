@@ -2,16 +2,13 @@ package tests;
 
 import constants.Urls;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class Typos extends BaseTest {
+public class TyposTest extends BaseTest {
     @Test
-    public void findMistake() {
+    public void findMistakeTest () {
         //Open Chrome browser
         driver.get(Urls.TYPOS_PAGE_URL);
         // Find sentence with mistake
