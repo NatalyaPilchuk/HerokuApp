@@ -17,5 +17,19 @@ public class DataTablesPage extends BasePage {
     public void openDataTablePage() {
         driver.get(Urls.DATA_TABLES_PAGE_URL);
     }
+    public String getNameBach() {
 
+        return driver.findElement(NAME_BACH).getText();
+    }
+    public String getNameFrank() {
+        return driver.findElement(NAME_FRANK).getText();
+    }
+    public String getPrice() {
+        return driver.findElement(PRICE_DUE).getText();
+    }
+    public String geWebsite() {
+        return driver.findElement(WEBSITE).getText();
+    }
 }
+
+

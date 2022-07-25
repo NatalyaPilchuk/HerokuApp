@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class NotificationMessagePage extends BasePage {
     private By CLICK_HERE = By.xpath("//a[text()='Click here']");
     private By TEXT = By.xpath("[class='flash notice']");
+    private By ACTION_MESSAGE = By.cssSelector("[class='flash notice']");
 
     public NotificationMessagePage(WebDriver driver) {
 
@@ -21,6 +22,9 @@ public class NotificationMessagePage extends BasePage {
     public void clickHere() {
 
         driver.findElement(CLICK_HERE).click();
+    }
+    public boolean getActionMessage() {
+        return driver.findElement(ACTION_MESSAGE).getText().contains("Action successful");
     }
 
 
