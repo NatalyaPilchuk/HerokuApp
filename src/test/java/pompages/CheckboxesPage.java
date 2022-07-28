@@ -29,6 +29,7 @@ public class CheckboxesPage extends BasePage {
     }
 
     public boolean isSecondCheckboxSelected() {
+
         return driver.findElement(CHECKBOX2).isSelected();
     }
 }
