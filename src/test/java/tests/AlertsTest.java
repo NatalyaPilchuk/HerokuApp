@@ -10,8 +10,10 @@ public class AlertsTest extends BaseTest {
         AlertsPage alertsPage = new AlertsPage(driver);
         alertsPage.openAlertPage();
         alertsPage.clickAlert1();
-        Assert.assertEquals("I am a JS Alert", alertsPage.getTextAlert(), "there isn't such  phrase");
+        String  actualText=alertsPage.getTextAlert();
         alertsPage.closeAlert1();
+        Assert.assertEquals(actualText,"I am a JS Alert",  "there isn't such  phrase");
+
     }
 
     @Test
@@ -19,8 +21,10 @@ public class AlertsTest extends BaseTest {
         AlertsPage alertsPage = new AlertsPage(driver);
         alertsPage.openAlertPage();
         alertsPage.clickAlert2();
-        Assert.assertEquals("I am a JS Confirm", alertsPage.getTextAlert(), "there isn't such  phrase");
+        String actualText =alertsPage.getTextAlert();
         alertsPage.closeAlert2();
+        Assert.assertEquals( actualText,"I am a JS Confirm", "there isn't such  phrase");
+
     }
 
     @Test

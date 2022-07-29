@@ -10,7 +10,7 @@ public class DragAndDropTest extends BaseTest {
         DragAndDropPage dragAndDropPage = new DragAndDropPage(driver);
         dragAndDropPage.openDragAndDropPage();
         dragAndDropPage.dragging();
-        Assert.assertEquals("Dropped!", dragAndDropPage.getTextFromElement(), "there isn't such text");
+        Assert.assertEquals(dragAndDropPage.getTextFromElement(),"Dropped!",  "there isn't such text");
     }
 
 

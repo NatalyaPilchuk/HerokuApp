@@ -29,18 +29,20 @@ public class DropDownPage extends BasePage {
 
     }
 
-    public boolean option1() {
+    public boolean takeOption1() {
         WebElement dropDownList = driver.findElement(By.id("dropdown"));
         Select selectOption = new Select(dropDownList);
         selectOption.selectByIndex(1);
-        return true;
+        WebElement option1=selectOption.getFirstSelectedOption();
+        return option1.isSelected();
     }
 
-    public boolean option2() {
+    public boolean takeOption2() {
         WebElement dropDownList = driver.findElement(By.id("dropdown"));
         Select selectOption = new Select(dropDownList);
         selectOption.selectByIndex(2);
-        return true;
+        WebElement option2=selectOption.getFirstSelectedOption();
+        return option2.isSelected();
     }
 
 

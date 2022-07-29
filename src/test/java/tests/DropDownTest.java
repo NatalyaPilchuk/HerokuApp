@@ -1,8 +1,5 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pompages.DropDownPage;
@@ -21,13 +18,13 @@ public class DropDownTest extends BaseTest {
     public void option1() {
         DropDownPage dropDownPage = new DropDownPage(driver);
         dropDownPage.openDropDownPage();
-        Assert.assertTrue(dropDownPage.option1(), "there isn't option1");
+        Assert.assertTrue(dropDownPage.takeOption1(), "there isn't option1");
     }
 
     @Test
     public void option2() {
         DropDownPage dropDownPage = new DropDownPage(driver);
         dropDownPage.openDropDownPage();
-        Assert.assertTrue(dropDownPage.option2(), "there isn't option2");
+        Assert.assertTrue(dropDownPage.takeOption2(), "there isn't option2");
     }
 }
